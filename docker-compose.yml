@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  reverseproxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "443:443" 
+      - "81:81" 
+    restart: always
